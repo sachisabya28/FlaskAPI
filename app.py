@@ -40,7 +40,7 @@ def get_store(name):
 def get_stores():
     return jsonify({'stores': stores}) 
 
-@app.route('/store/<string:name>/item', methods=['POST'])
+@app.route('/store/<string:name>/item', methods=['POST']) 
 def create_item_in_store(name):
     request_data = request.get_json()
     for store in stores:
